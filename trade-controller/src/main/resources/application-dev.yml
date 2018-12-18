@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    include: dev-dao,dev-redis
+server:
+  port: 58084
+### eureka ###
+eureka:
+  instance:
+    hostname: 192.168.1.164
+    ip-address: ${eureka.instance.hostname}
+  client: # 客户端进行Eureka注册的配置
+    service-url:
+      defaultZone: http://user:${eureka.password}@${eureka.instance.hostname}:58761/eureka

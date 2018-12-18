@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    include: test-dao,test-redis
+  aop:
+    proxy-target-class: false
+
+### eureka ###
+eureka:
+  instance:
+    hostname: 192.168.1.165
+    ip-address: ${eureka.instance.hostname}
+  client: # 客户端进行Eureka注册的配置
+    service-url:
+      defaultZone: http://user:${eureka.password}@${eureka.instance.hostname}:8761/eureka

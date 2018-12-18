@@ -1,0 +1,25 @@
+server:
+  port: 8084
+spring:
+  profiles:
+    active: local
+  application:
+    name: trade-center
+  session:
+    store-type: redis
+logging:
+  config: classpath:logback.xml
+ribbon:
+  #请求处理的超时时间
+  ReadTimeout: 120000
+  #请求连接的超时时间
+  ConnectTimeout: 30000
+### eureka ###
+eureka:
+  password: password
+  instance:
+    lease-renewal-interval-in-seconds: 30 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 90 # 如果现在超过了5秒的间隔（默认是90秒）
+    prefer-ip-address: true # 访问的路径变为IP地址
+  client: # 客户端进行Eureka注册的配置
+    registryFetchIntervalSeconds: 5

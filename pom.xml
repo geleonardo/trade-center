@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lmt.mbsp.trade</groupId>
+    <artifactId>trade-center</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <parent>
+        <groupId>com.lmt</groupId>
+        <artifactId>super-bom</artifactId>
+        <version>0.0.5-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+    <modules>
+        <module>trade-controller</module>
+        <module>trade-service</module>
+        <module>trade-dao</module>
+        <module>trade-adapter</module>
+        <module>trade-redis</module>
+        <module>trade-model</module>
+        <!--<module>trade-controller</module>
+        <module>trade-service</module>
+        <module>trade-model</module>
+        <module>trade-dao</module>
+        <module>trade-redis</module>-->
+    </modules>
+
+    <properties>
+        <trade.version>${project.version}</trade.version>
+        <user.version>1.0.1-SNAPSHOT</user.version>
+        <lmt-framework.version>1.0.1-SNAPSHOT</lmt-framework.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+        </dependency>
+    </dependencies>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <!--本项目-->
+            <dependency>
+                <groupId>com.lmt.mbsp.trade</groupId>
+                <artifactId>trade-controller</artifactId>
+                <version>${trade.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lmt.mbsp.trade</groupId>
+                <artifactId>trade-service</artifactId>
+                <version>${trade.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lmt.mbsp.trade</groupId>
+                <artifactId>trade-dao</artifactId>
+                <version>${trade.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lmt.mbsp.trade</groupId>
+                <artifactId>trade-adapter</artifactId>
+                <version>${trade.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lmt.mbsp.trade</groupId>
+                <artifactId>trade-redis</artifactId>
+                <version>${trade.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lmt.mbsp.trade</groupId>
+                <artifactId>trade-model</artifactId>
+                <version>${trade.version}</version>
+            </dependency>
+
+
+
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>swagger-bootstrap-ui</artifactId>
+                <version>1.7.7</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.2.3</version>
+            </dependency>
+
+            <!--框架支持引用-->
+            <dependency>
+                <groupId>com.lmt.framework</groupId>
+                <artifactId>lmt-core</artifactId>
+                <version>${lmt-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lmt.framework</groupId>
+                <artifactId>lmt-utils</artifactId>
+                <version>${lmt-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lmt.framework</groupId>
+                <artifactId>lmt-support-controller</artifactId>
+                <version>${lmt-framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.lmt.framework</groupId>
+                <artifactId>lmt-support-dao-api</artifactId>
+                <version>${lmt-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lmt.framework</groupId>
+                <artifactId>lmt-support-dao-mybatis</artifactId>
+                <version>${lmt-framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.lmt.framework</groupId>
+                <artifactId>lmt-support-model</artifactId>
+                <version>${lmt-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lmt.framework</groupId>
+                <artifactId>lmt-support-entity</artifactId>
+                <version>${lmt-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lmt.framework</groupId>
+                <artifactId>lmt-support-service-common</artifactId>
+                <version>${lmt-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-redis</artifactId>
+                <version>1.4.7.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-cache</artifactId>
+                <version>2.0.3.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>aliyun-java-sdk-rds</artifactId>
+                <version>2.1.9</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+
+
+
+
+</project>
