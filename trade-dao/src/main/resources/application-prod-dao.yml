@@ -4,7 +4,7 @@ spring:
     username: root
     password: Dev@2019
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://rm-uf6l7m00a08gc26166o.mysql.rds.aliyuncs.com:3306/lmt_trade?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&autoReconnect=true
+    url: jdbc:mysql://111111111111.111111111111:3306/lmt_trade?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&autoReconnect=true
     ###################以下为druid增加的配置###########################
     type: com.alibaba.druid.pool.DruidDataSource
     # 下面为连接池的补充设置，应用到上面所有数据源中
